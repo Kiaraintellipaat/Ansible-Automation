@@ -8,8 +8,7 @@
     
 - name: Install MySQL
   hosts: your_mysql_servers
-  become: true  # Run tasks with sudo privileges
-
+  become: true  
   tasks:
     - name: Update apt package cache
       apt:
@@ -18,7 +17,7 @@
     - name: Install MySQL packages
       apt:
         name: 
-          - mysql-server   # MySQL server package
-          - mysql-client   # MySQL client package
-        state: present     # Ensure the packages are present (installed)
+          - mysql-server   
+          - mysql-client   
+        state: present    
 
