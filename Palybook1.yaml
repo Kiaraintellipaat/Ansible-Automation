@@ -1,14 +1,7 @@
 ---
-- name: Install Apache2
+- name: tasks for assign1 on slave1
   hosts: slave1
-  become: true  # Run tasks with sudo privileges
-  
+  become: true
   tasks:
-    - name: Update apt package cache
-      apt:
-        update_cache: yes  # Update apt package cache
-    
-    - name: Install Nginx
-      apt:
-        name: nginx # Package name
-        state: present  # Ensure the package is present (installed)
+  - name: install Java
+    apt: name=openjdk-11-jdk state=latest
