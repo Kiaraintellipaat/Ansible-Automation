@@ -6,9 +6,19 @@
   - name: install Java
     apt: name=openjdk-11-jdk state=latest
     
-- name: tasks for assign1 on slave1
-  hosts: slave1
-  become: true
+- name: Install MySQL
+  hosts: your_mysql_servers
+  become: true  # Run tasks with sudo privileges
+
   tasks:
-  - name: install mysql
-    apt: name=mysql-server state=latest
+    - name: Update apt package cache
+      apt:
+        update_cache: yes  # Update apt package cache
+
+    - name: Install MySQL packages
+      apt:
+        name: 
+          - mysql-server   # MySQL server package
+          - mysql-client   # MySQL client package
+        state: present     # Ensure the packages are present (installed)
+
