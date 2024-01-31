@@ -8,7 +8,7 @@
       apt:
         update_cache: yes  # Update apt package cache
     
-    - name: Install Apache2
+    - name: Install Nginx
       apt:
-        name: apache2  # Package name
+        name: nginx # Package name
         state: present  # Ensure the package is present (installed)
