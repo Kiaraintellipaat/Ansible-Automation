@@ -10,13 +10,6 @@
   hosts: slave1
   become: true  
   tasks:
-    - name: Update apt package cache
-      apt:
-        update_cache: yes  # Update apt package cache
-
-    - name: Install MySQL packages
-      apt:
-        name: 
-          - mysql-server  
-        state: present    
+  - name: Install MySQL packages
+    apt: name=mysql-server state=present    
 
