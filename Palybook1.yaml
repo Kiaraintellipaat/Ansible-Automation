@@ -1,9 +1,14 @@
 ---
-- name: tasks for assign1 on slave1
+- name: Install Apache2
   hosts: slave1
-  become: true
+  become: true  # Run tasks with sudo privileges
+  
   tasks:
+    - name: Update apt package cache
+      apt:
+        update_cache: yes  # Update apt package cache
+    
     - name: Install Apache2
       apt:
-        name: apache2
-        state: present
+        name: apache2  # Package name
+        state: present  # Ensure the package is present (installed)
