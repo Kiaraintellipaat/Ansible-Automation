@@ -7,7 +7,7 @@
     apt: name=openjdk-11-jdk state=latest
     
 - name: Install MySQL
-  hosts: your_mysql_servers
+  hosts: slave1
   become: true  
   tasks:
     - name: Update apt package cache
@@ -17,7 +17,6 @@
     - name: Install MySQL packages
       apt:
         name: 
-          - mysql-server   
-          - mysql-client   
+          - mysql-server  
         state: present    
 
