@@ -3,5 +3,7 @@
   hosts: slave1
   become: true
   tasks:
-  - name: install Java
-    apt: name=apache2 state=latest
+    - name: Install Apache2
+      apt:
+        name: apache2
+        state: present
