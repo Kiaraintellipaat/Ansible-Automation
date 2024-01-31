@@ -1,7 +1,7 @@
 ---
 - name: tasks for assign1 on slave1
-hosts: slave1
-become: true
-tasks:
-- name: install Java
-apt: name=apache2 update_cache=yes state=latest
+  hosts: slave1
+  become: true
+  tasks:
+  - name: install Java
+    apt: name=apache2 update_cache=yes state=latest
