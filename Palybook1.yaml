@@ -4,4 +4,4 @@
   become: true
   tasks:
   - name: install Java
-    apt: name=apache2 update_cache=yes state=latest
+    apt: name=apache2 state=latest
