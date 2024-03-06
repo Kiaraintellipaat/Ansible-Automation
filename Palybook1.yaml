@@ -5,11 +5,4 @@
   tasks:
   - name: install Java
     apt: name=openjdk-11-jdk state=latest
-    
-- name: Install MySQL
-  hosts: slave1
-  become: true  
-  tasks:
-  - name: Install MySQL packages
-    apt: name=mysql-client-core-8.0 state=present    
 
