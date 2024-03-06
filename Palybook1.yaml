@@ -1,6 +1,6 @@
 ---
 - name: tasks for assign1 on slave1
-  hosts: slave1
+  hosts: slave
   become: true
   tasks:
   - name: install Java
