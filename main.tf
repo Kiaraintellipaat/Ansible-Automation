@@ -10,5 +10,5 @@ resource "aws_instance" "assignment-1" {
         key_name = "Ansible"
         tags = {
         Name = "assignment-1"
-        }
+}
 }
